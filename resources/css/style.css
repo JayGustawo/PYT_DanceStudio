@@ -2,6 +2,13 @@
 --------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700');
 
+/* *** CSS Variables *** */
+:root{
+	--accentColor: #f5a623;
+	
+}
+
+
 html,
 body {
 	font-size: 16px;
@@ -19,11 +26,12 @@ ul {
 }
 
 /*Navbar
---------------------------------------*/
+--------------------------------------
+*/	
 
 nav {
 	background-color: #000;
-	display: flex;
+	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 3.875rem;
@@ -40,7 +48,7 @@ nav .logo .mobile {
 }
 
 nav .nav-links ul li {
-	display: inline-block;
+	display:inline-block;
 	margin-right: 3.4375rem;
 }
 
@@ -48,11 +56,11 @@ nav .nav-links ul li a {
 	color: #fff;
 	font-family: "Open Sans";
 	font-weight: bold;
-	font-size: 1rem;
+	font-size: 2rem;
 }
 
-nav .nav-links ul li a.active {
-	color: #f5a623;
+nav li .active {
+	color: var(--accentColor);
 }
 
 @media only screen and (max-width: 576px) {
@@ -76,13 +84,15 @@ nav .nav-links ul li a.active {
 	}
 
 	nav .nav-links ul li {
-		margin-right: 0.75rem;
+		margin-right: 1rem;
 	}
 
 	nav .nav-links ul li a {
-		font-size: 0.75rem;
+		font-size: 1rem;
 	}
+	
 }
+
 
 /*index.html
 ----------------------------------------------------------*/
@@ -117,14 +127,23 @@ nav .nav-links ul li a.active {
 	margin-bottom: 5rem;
 }
 
-.jumbotron .container a.btn {
+.jumbotron .container .button-modal {
 	border-radius: 2px;
-	background-color: #f5a623;
+	background-color: var(--accentColor);
 	font-family: "Open Sans", sans-serif;
 	font-size: 1.375rem;
 	font-weight: bold;
 	padding: 1.25rem 3.125rem;
 	display: inline-block;
+}
+
+.modal h4{
+	font-weight: bolder;
+	color: #794ae2;
+}
+.modal-text{
+	color: #000;
+	background-color: var(--accentColor);
 }
 
 @media only screen and (max-width: 768px) {
@@ -187,7 +206,7 @@ nav .nav-links ul li a.active {
 /*Content*/
 .content {
 	max-height: 20rem;
-	width: 25rem;
+	width: 30rem;
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -490,7 +509,7 @@ footer .info .company-info {
 
 .about-support-map > .content {
 	background-color: rgba(120, 73, 225, 0.9);
-	max-height: initial;
+	max-height:initial;
 }
 
 @media only screen and (max-width: 768px) {
